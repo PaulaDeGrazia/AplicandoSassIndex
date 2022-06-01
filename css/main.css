@@ -1,0 +1,141 @@
+/* MQ */
+@media screen and (min-width: 1200px) {
+  /* Header y nav */
+  header h1 {
+    font-size: 6rem; }
+  nav ul li {
+    font-size: 1.5rem; }
+  /* Footer */
+  footer .footer-inf div .footer-contact {
+    font-size: 1rem; }
+  footer .footer-inf .footer-nav-html {
+    font-size: 1.5rem; }
+  /* Main Index para desktop */
+  .main-index div .sec-new-arrivals {
+    display: flex;
+    background-color: #0D5A65;
+    width: 80%;
+    height: 700px;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+    align-items: center; }
+    .main-index div .sec-new-arrivals h2 {
+      padding-left: 3rem;
+      font-size: 3rem; }
+  .main-index div .sec-sale {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 700px;
+    margin-top: 4rem;
+    margin-bottom: 4rem; }
+    .main-index div .sec-sale h2 {
+      text-align: right;
+      font-size: 3rem;
+      padding-right: 3rem; }
+  .img-sec {
+    width: auto;
+    height: 100%; } }
+
+body {
+  background-color: whitesmoke; }
+
+/* Estilos del header y nav, igual en todas los html*/
+header h1 {
+  color: #DA0037;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  text-align: center; }
+
+nav ul {
+  background-color: #171717;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none; }
+  nav ul li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    color: #D8E9A8;
+    padding: 1rem;
+    transition: 2s; }
+    nav ul li a {
+      text-decoration: none;
+      color: #D8E9A8; }
+
+nav ul li:hover {
+  background-color: #E63E6D;
+  font-weight: bolder;
+  transform: scale(1.05);
+  animation: headShake;
+  animation-duration: 2s; }
+
+/* Estilos del Footer, igual en todos los html*/
+footer {
+  background-color: #171717;
+  justify-content: center;
+  position: relative;
+  margin-top: 2rem;
+  padding: 2rem; }
+  footer .footer-inf {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 1rem; }
+    footer .footer-inf div .footer-contact {
+      font-size: 0.4rem;
+      font-weight: lighter;
+      color: #D8E9A8;
+      font-family: "Montserrat", sans-serif; }
+    footer .footer-inf .footer-nav-html {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.8rem;
+      color: #D8E9A8; }
+      footer .footer-inf .footer-nav-html .footer-redirigir {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center; }
+        footer .footer-inf .footer-nav-html .footer-redirigir li a {
+          text-decoration: none;
+          color: #D8E9A8; }
+  footer .derecho-autor {
+    font-family: "Montserrat", sans-serif;
+    color: #D8E9A8;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.5rem;
+    font-weight: lighter;
+    padding: 0.5rem; }
+
+/*Estilo del main Index*/
+.main-index {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr 1fr 1fr 1fr);
+  grid-template-areas: "sec-new-arrivals" "sec-sale";
+  row-gap: 2rem; }
+  .main-index div .sec-new-arrivals {
+    background-color: #68A7AD;
+    width: 80%;
+    margin: 1rem auto;
+    flex-wrap: wrap; }
+    .main-index div .sec-new-arrivals h2 {
+      padding: 5rem 0 5rem 2rem;
+      font-size: 2rem;
+      font-family: "Archivo Black", sans-serif; }
+  .main-index div .sec-sale {
+    background-color: #FFF338;
+    width: 80%;
+    margin: 1rem auto; }
+    .main-index div .sec-sale h2 {
+      padding: 5rem 2rem 5rem;
+      font-size: 2rem;
+      font-family: "Archivo Black", sans-serif;
+      text-align: right; }
+
+.img-sec {
+  width: 100%;
+  height: 60%; }

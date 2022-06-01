@@ -1,0 +1,150 @@
+//Sólo apliqué SASS en index
+
+//variables
+
+@import "utilities/variables";
+@import "utilities/medias";
+
+//Apliqué Nesting
+
+body{
+    background-color: $color-body;
+}
+
+/* Estilos del header y nav, igual en todas los html*/ 
+
+header{
+    h1{
+        color: $color-h1;
+        font-size: $size-h1;
+        font-family: $font-h1;
+        text-align: center;
+    }
+}
+
+nav{
+    ul{
+        background-color: $color-nav-footer;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        li{
+            font-family: $font-nav;
+            font-size: $size-font-nav;
+            color: $color-font-nav;
+            padding: 1rem;
+            transition: 2s;
+            a{
+                text-decoration: none;
+                color: #D8E9A8;
+            }
+        
+        }
+    }
+}
+
+nav ul li:hover{
+    background-color: $color-hover-nav;
+    font-weight: bolder;
+    transform: scale(1.05);
+    animation: $animate-hoover;
+    animation-duration: $animate-duration-hoover;
+}
+
+/* Estilos del Footer, igual en todos los html*/
+    
+footer{
+    background-color: $color-nav-footer;
+    justify-content: center;
+    position: relative; 
+    margin-top: 2rem;
+    padding: 2rem;
+    .footer-inf{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        padding-bottom: 1rem;
+        div{
+            .footer-contact{
+                font-size: $size-footer-contact;
+                font-weight: lighter;
+                color: $color-font-nav;
+                font-family: $font-nav;
+            }
+        }
+        .footer-nav-html{
+            font-family: $font-nav;
+            font-size: $size-font-nav;
+            color: $color-font-nav;
+            .footer-redirigir{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $color-link-a-nav;
+                    }
+                }
+            }
+        }
+    }
+    .derecho-autor{
+        font-family: $font-nav;
+        color: $color-font-nav;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 0.5rem;
+        font-weight: lighter;
+        padding: 0.5rem;
+    }
+}
+
+
+/*Estilo del main Index*/
+
+.main-index{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(1fr 1fr 1fr 1fr);
+    grid-template-areas: "sec-new-arrivals"
+                         "sec-sale";
+    row-gap: 2rem;
+    div{
+        .sec-new-arrivals{
+            background-color: #68A7AD;
+            width: 80%;
+            margin: 1rem auto;
+            flex-wrap: wrap;
+            h2{
+                padding: 5rem 0 5rem 2rem;
+                font-size: $size-font-img;
+                font-family: $font-main-img;
+            }
+        }
+    }
+    div{
+        .sec-sale{
+            background-color: #FFF338;
+            width: 80%;
+            margin: 1rem auto;
+            h2{
+                padding: 5rem 2rem 5rem;
+                font-size: $size-font-img;
+                font-family: $font-main-img;
+                text-align: right;
+            }
+        }
+    }
+    
+}
+
+.img-sec{
+    width: 100%;
+    height: 60%;
+}
+
