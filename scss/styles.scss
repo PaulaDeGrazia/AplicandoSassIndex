@@ -4,6 +4,8 @@
 
 @import "utilities/variables";
 @import "utilities/medias";
+@import "utilities/mixins";
+@import "extended";
 
 //Apliqué Nesting
 
@@ -12,13 +14,11 @@ body{
 }
 
 /* Estilos del header y nav, igual en todas los html*/ 
+/*Agregué extend en todos los h1 pq son iguales y en los links <a> */ 
 
 header{
     h1{
-        color: $color-h1;
-        font-size: $size-h1;
-        font-family: $font-h1;
-        text-align: center;
+        @extend %chippra;
     }
 }
 
@@ -36,8 +36,7 @@ nav{
             padding: 1rem;
             transition: 2s;
             a{
-                text-decoration: none;
-                color: #D8E9A8;
+                @extend %a-nav;
             }
         
         }
@@ -85,8 +84,7 @@ footer{
                 justify-items: center;
                 li{
                     a{
-                        text-decoration: none;
-                        color: $color-link-a-nav;
+                        @extend %a-nav;
                     }
                 }
             }
@@ -107,6 +105,8 @@ footer{
 
 /*Estilo del main Index*/
 
+/*Incluí mixins en el main del index para las sections y en las imágenes*/
+
 .main-index{
     display: grid;
     grid-template-columns: 1fr ;
@@ -117,7 +117,7 @@ footer{
     div{
         .sec-new-arrivals{
             background-color: #68A7AD;
-            width: 80%;
+            @include sizes(80%, auto);
             margin: 1rem auto;
             flex-wrap: wrap;
             h2{
@@ -130,7 +130,7 @@ footer{
     div{
         .sec-sale{
             background-color: #FFF338;
-            width: 80%;
+            @include sizes(80%, auto);
             margin: 1rem auto;
             h2{
                 padding: 5rem 2rem 5rem;
@@ -144,7 +144,6 @@ footer{
 }
 
 .img-sec{
-    width: 100%;
-    height: 60%;
+    @include sizes(100%, 60%);
 }
 
