@@ -3,9 +3,9 @@
     color: $color-link-a-nav;
 }
 
-%chippra{
-    color: $color-h1;
-    font-size: $size-h1;
-    font-family: $font-h1;
-    text-align: center;
+%nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
 }

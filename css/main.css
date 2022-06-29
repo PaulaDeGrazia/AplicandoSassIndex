@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* MQ */
 @media screen and (min-width: 1200px) {
   /* Header y nav */
@@ -38,110 +37,124 @@
     width: auto;
     height: 100%; } }
 
-@impo //Apliqué Nesting
+nav ul li a, footer .foot-rrss li a {
+  text-decoration: none;
+  color: #D8E9A8; }
 
-body {
-  background-color: whitesmoke; }
-
-/* Estilos del header y nav, igual en todas los html*/
-header h1 {
-  color: #DA0037;
-  font-size: 3rem;
-  font-family: "Playfair Display", serif;
-  text-align: center; }
-
-nav ul {
-  background-color: #171717;
+nav ul, footer .foot-rrss, #main-contacto ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   list-style-type: none; }
-  nav ul li {
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.8rem;
-    color: #D8E9A8;
-    padding: 1rem;
-    transition: 2s; }
-    nav ul li a {
-      text-decoration: none;
-      color: #D8E9A8; }
 
-nav ul li:hover {
-  background-color: #E63E6D;
-  font-weight: bolder;
-  transform: scale(1.05);
-  animation: headShake;
-  animation-duration: 2s; }
+/*Reset*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
 
-/* Estilos del Footer, igual en todos los html*/
-footer {
-  background-color: #171717;
-  justify-content: center;
-  position: relative;
-  margin-top: 2rem;
-  padding: 2rem; }
-  footer .footer-inf {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-    padding-bottom: 1rem; }
-    footer .footer-inf div .footer-contact {
-      font-size: 0.4rem;
-      font-weight: lighter;
-      color: #D8E9A8;
-      font-family: "Montserrat", sans-serif; }
-    footer .footer-inf .footer-nav-html {
+/* Estilos del header y nav, igual en todas los html*/
+header {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  header h1 {
+    font-family: "Brawler", serif;
+    font-size: 2rem;
+    color: #E14545;
+    letter-spacing: 0.3rem; }
+
+nav {
+  height: 1.5rem;
+  width: 100%;
+  background-color: #272626; }
+  nav ul {
+    height: 100%;
+    width: 100%; }
+    nav ul li {
       font-family: "Montserrat", sans-serif;
       font-size: 0.8rem;
-      color: #D8E9A8; }
-      footer .footer-inf .footer-nav-html .footer-redirigir {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center; }
-        footer .footer-inf .footer-nav-html .footer-redirigir li a {
-          text-decoration: none;
-          color: #D8E9A8; }
-  footer .derecho-autor {
+      color: #D8E9A8;
+      transition: 2s; }
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "nav-foot foot-rrss" "footer-derechos footer-derechos";
+  background-color: #272626;
+  padding-top: 1rem;
+  align-items: center; }
+  footer .foot-nav {
+    grid-area: nav-foot;
     font-family: "Montserrat", sans-serif;
-    color: #D8E9A8;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 0.5rem;
-    font-weight: lighter;
-    padding: 0.5rem; }
+    font-size: 0.8rem;
+    color: #D8E9A8; }
+    footer .foot-nav ul {
+      display: flex;
+      flex-direction: column; }
+  footer .foot-rrss {
+    grid-area: foot-rrss;
+    align-items: center;
+    justify-items: center; }
+  footer .footer-derechos {
+    grid-area: footer-derechos; }
+    footer .footer-derechos h4 {
+      font-family: "Montserrat", sans-serif;
+      color: #D8E9A8;
+      font-size: 0.5rem;
+      font-weight: lighter;
+      padding: 0.5rem;
+      text-align: end; }
 
 /*Estilo del main Index*/
-/*Incluí mixins en el main del index para las sections y en las imágenes*/
-.main-index {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(1fr 1fr 1fr 1fr);
-  grid-template-areas: "sec-new-arrivals" "sec-sale";
-  row-gap: 2rem; }
-  .main-index div .sec-new-arrivals {
-    background-color: #68A7AD;
-    height: auto;
-    width: 80%;
-    margin: 1rem auto;
-    flex-wrap: wrap; }
-    .main-index div .sec-new-arrivals h2 {
-      padding: 5rem 0 5rem 2rem;
-      font-size: 2rem;
-      font-family: "Archivo Black", sans-serif; }
-  .main-index div .sec-sale {
-    background-color: #FFF338;
-    height: auto;
-    width: 80%;
-    margin: 1rem auto; }
-    .main-index div .sec-sale h2 {
-      padding: 5rem 2rem 5rem;
-      font-size: 2rem;
-      font-family: "Archivo Black", sans-serif;
-      text-align: right; }
+#main-index {
+  background-image: url("/home/fondoHome.png");
+  background-size: 100% 100%;
+  height: 360px;
+  position: relative; }
+  #main-index .text {
+    padding-top: 2.5rem; }
+    #main-index .text .we {
+      padding-left: 2rem;
+      font-family: "Brawler", serif;
+      font-size: 1rem; }
+    #main-index .text .title {
+      padding-left: 1rem;
+      font-family: "Brawler", serif;
+      font-size: 3rem; }
+    #main-index .text .desc {
+      padding-left: 2rem;
+      font-family: "Brawler", serif;
+      font-size: 0.75rem; }
+  #main-index .img-girl {
+    bottom: 0;
+    right: 0;
+    position: absolute; }
+    #main-index .img-girl img {
+      height: 200px;
+      width: 200px; }
 
-.img-sec {
-  height: 60%;
+/* Estilo main html Contato */
+#main-contacto {
+  height: auto;
   width: 100%; }
+  #main-contacto h3 {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem; }
+  #main-contacto div h4 {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 1rem; }
+  #main-contacto div .ubicacion {
+    height: 100%;
+    width: 100%; }
+    #main-contacto div .ubicacion iframe {
+      height: 100%;
+      width: 80%; }

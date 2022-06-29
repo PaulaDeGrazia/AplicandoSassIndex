@@ -1,149 +1,166 @@
-//Sólo apliqué SASS en index
+//First 
 
 //variables
 
 @import "utilities/variables";
+@import "utilities/font";
 @import "utilities/medias";
 @import "utilities/mixins";
-@import "extended";
+@import "utilities/extend";
 
-//Apliqué Nesting
+/*Reset*/
 
-body{
-    background-color: $color-body;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+//Aplicación de Nesting//
+
 /* Estilos del header y nav, igual en todas los html*/ 
-/*Agregué extend en todos los h1 pq son iguales y en los links <a> */ 
 
 header{
+    @include sizes(100%, 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     h1{
-        @extend %chippra;
+        font-family: $font-h1;
+        font-size: ($size-h1 /1.5);
+        color: #E14545;
+        letter-spacing: 0.3rem;
     }
 }
 
 nav{
+    @include sizes (100%,1.5rem);
+    background-color: $color-nav;    
     ul{
-        background-color: $color-nav-footer;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        list-style-type: none;
+        @include sizes (100%, 100%);
+        @extend %nav;
         li{
             font-family: $font-nav;
             font-size: $size-font-nav;
             color: $color-font-nav;
-            padding: 1rem;
             transition: 2s;
             a{
                 @extend %a-nav;
-            }
-        
+            }        
         }
     }
 }
-
-nav ul li:hover{
-    background-color: $color-hover-nav;
-    font-weight: bolder;
-    transform: scale(1.05);
-    animation: $animate-hoover;
-    animation-duration: $animate-duration-hoover;
-}
-
-/* Estilos del Footer, igual en todos los html*/
     
 footer{
-    background-color: $color-nav-footer;
-    justify-content: center;
-    position: relative; 
-    margin-top: 2rem;
-    padding: 2rem;
-    .footer-inf{
-        display: flex;
-        justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "nav-foot foot-rrss"
+                         "footer-derechos footer-derechos";
+    background-color: $color-nav; 
+    padding-top: 1rem;
+    align-items: center;
+    .foot-nav{
+        grid-area: nav-foot;
+        font-family: $font-nav;
+        font-size: $size-font-nav;
+        color: $color-font-nav;
+        & ul{
+            display: flex;
+            flex-direction: column;
+        }        
+    }
+    .foot-rrss{
+        grid-area: foot-rrss;
+        @extend %nav;
         align-items: center;
         justify-items: center;
-        padding-bottom: 1rem;
-        div{
-            .footer-contact{
-                font-size: $size-footer-contact;
-                font-weight: lighter;
-                color: $color-font-nav;
-                font-family: $font-nav;
+        li{
+            a{
+                @extend %a-nav;
             }
         }
-        .footer-nav-html{
+    }
+    .footer-derechos{
+        grid-area: footer-derechos;
+        h4{
             font-family: $font-nav;
-            font-size: $size-font-nav;
             color: $color-font-nav;
-            .footer-redirigir{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-items: center;
-                li{
-                    a{
-                        @extend %a-nav;
-                    }
-                }
-            }
+            font-size: 0.5rem;
+            font-weight: lighter;
+            padding: 0.5rem;
+            text-align: end;
         }
     }
-    .derecho-autor{
-        font-family: $font-nav;
-        color: $color-font-nav;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-size: 0.5rem;
-        font-weight: lighter;
-        padding: 0.5rem;
-    }
-}
-
+    
+}       
+    
 
 /*Estilo del main Index*/
 
-/*Incluí mixins en el main del index para las sections y en las imágenes*/
+#main-index{
+    background-image: url("/home/fondoHome.png");
+    background-size: 100% 100%;
+    height: 360px;
+    position: relative;
+    .text{
+        padding-top: 2.5rem;
+        .we{
+            padding-left: 2rem;
+            font-family: $font-h1;
+            font-size: 1rem;
+        }
+        .title{
+            padding-left: 1rem;
+            font-family: $font-h1;
+            font-size: 3rem;
+        }
+        .desc{
+            padding-left: 2rem;
+            font-family: $font-h1;
+            font-size: ($size-h1 / 4 );
+        }
+    }
+    .img-girl{
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        & img{
+                height: 200px;
+                width: 200px;
 
-.main-index{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: repeat(1fr 1fr 1fr 1fr);
-    grid-template-areas: "sec-new-arrivals"
-                         "sec-sale";
-    row-gap: 2rem;
-    div{
-        .sec-new-arrivals{
-            background-color: #68A7AD;
-            @include sizes(80%, auto);
-            margin: 1rem auto;
-            flex-wrap: wrap;
-            h2{
-                padding: 5rem 0 5rem 2rem;
-                font-size: $size-font-img;
-                font-family: $font-main-img;
+        }
+    }
+}
+
+
+
+/* Estilo main html Contato */
+
+#main-contacto{
+    @include sizes (100%, auto);
+    & h3{
+        font-family: $font-contact;
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    & ul{
+        @extend %nav;
+    }
+    & div{
+        h4{
+            font-family: $font-contact;
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+        .ubicacion{
+            @include sizes (100%, 100%);
+            & iframe{
+                @include sizes (80%, 100%);
             }
         }
     }
-    div{
-        .sec-sale{
-            background-color: #FFF338;
-            @include sizes(80%, auto);
-            margin: 1rem auto;
-            h2{
-                padding: 5rem 2rem 5rem;
-                font-size: $size-font-img;
-                font-family: $font-main-img;
-                text-align: right;
-            }
-        }
-    }
-    
 }
-
-.img-sec{
-    @include sizes(100%, 60%);
-}
-
