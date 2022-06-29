@@ -60,6 +60,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center; }
+  header a {
+    text-decoration: none; }
   header h1 {
     font-family: "Brawler", serif;
     font-size: 2rem;
@@ -78,6 +80,12 @@ nav {
       font-size: 0.8rem;
       color: #D8E9A8;
       transition: 2s; }
+      nav ul li:hover {
+        background-color: #E63E6D;
+        font-weight: bolder;
+        transform: scale(1.05);
+        animation: headShake;
+        animation-duration: 2s; }
 
 footer {
   display: grid;
@@ -158,3 +166,55 @@ footer {
     #main-contacto div .ubicacion iframe {
       height: 100%;
       width: 80%; }
+
+/* Estilos main ayuda */
+#main-ayuda {
+  display: grid;
+  height: 100vh;
+  grid-template-areas: "sec-como.comprar" "sec-envios";
+  grid-row-gap: 1rem;
+  justify-items: center; }
+  #main-ayuda .sec-como-comprar {
+    margin-top: 1rem;
+    height: 50%;
+    width: 90%; }
+    #main-ayuda .sec-como-comprar h2 {
+      padding-left: 2rem;
+      font-family: "Darker Grotesque", sans-serif;
+      font-size: 3rem;
+      background-color: #B6F5C0; }
+    #main-ayuda .sec-como-comprar p {
+      padding: 2rem;
+      font-weight: bolder;
+      background-image: url(../ayuda/comocomprar.jpg);
+      background-size: 100% 100%;
+      opacity: 0.9; }
+  #main-ayuda .sec-envios {
+    height: 50%;
+    width: 90%;
+    margin-bottom: 1rem; }
+    #main-ayuda .sec-envios p {
+      text-align: right;
+      font-weight: bolder;
+      padding: 2rem;
+      background-image: url(../ayuda/envios.jpg);
+      background-size: 100% 100%;
+      font-size: 1rem;
+      opacity: 0.9; }
+    #main-ayuda .sec-envios h2 {
+      padding: 2rem;
+      text-align: right;
+      background-color: #F5B6B6;
+      font-family: "Darker Grotesque", sans-serif;
+      font-size: 3rem; }
+
+/* Estilos main Productos*/
+#container-fluid .row {
+  padding: 1rem; }
+
+/* Estilos del main html carrito*/
+#main-carrito {
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  border-collapse: collapse; }

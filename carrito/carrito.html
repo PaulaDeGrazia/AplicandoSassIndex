@@ -7,35 +7,42 @@
     <meta name="description" content="página de contacto de carro de compra de chippra e-commerce de indumentaria femenina, vas a ver todas tus compras realizadas en esta página">
     <meta name="keywords" content="finalizar, compra, tarjeta, crédito, débito, transferencia, mercado pago, efectivo, envíos, método de pago">
 
-     <!-- LINK DE CSS-->
-     <link rel="stylesheet" href="../css/styles.css">
+    <!--LINK DE ANIMATE-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-     <!-- LINK GOOGLE FONTS-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@100;300&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <!-- LINK DE CSS-->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- LINK GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Brawler&family=Darker+Grotesque:wght@300&family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+
+    <!--LINK ICONOS-->
+    <script src="https://kit.fontawesome.com/d6aeacbcd9.js" crossorigin="anonymous"></script>
+
     <title>CHIPPRA | Tus compras! </title>
+
 </head>
 
 <body>
     
     <header>
-        <h1>CHIPPRA</h1>
+        <a href="../index.html"> <h1>CHIPPRA</h1></a>
     </header>
         <nav>
             <ul>
-                <li> <a href="../index.html">HOME</a> </li>
-                <li> <a href="../productos/productos.html">PRODUCTOS</a> </li>
+                <li><a href="../productos/productos.html">PRODUCTOS</a></li>
                 <li> <a href="../contacto/contacto.html">CONTACTO</a> </li>
                 <li> <a href="../ayuda/ayuda.html">AYUDA</a> </li>
-                <li><img src="bx-cart.svg" alt="carro de compras"></li>
+                <li> <i class="fa-solid fa-cart-shopping"></i></li>
             </ul>
         </nav>
     
+    <main id="main-carrito">
 
-    <main>
         <table border="1" cellpadding="10"> 
-            
             <tbody> 
                 <tr>
                     <td>PRODUCTOS</td>
@@ -44,7 +51,7 @@
                     <td>SUBTOTAL</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td> 
                         <figure><img width="200" height="250" src="../productos/Body.png" alt="body negro"></figure>
                     </td>
                     <td>
@@ -57,7 +64,7 @@
                     </td>
                     <td>$1999,00</td>
                     <td>$1999,00</td>
-                    <td><figure><img src="bx-trash.svg" alt="icono de basura"></figure></td>
+                    <td><i class="fa-solid fa-trash-can"></i></td>
                 </tr>
                 <tr>
                     <td>
@@ -73,41 +80,37 @@
                     </td>
                     <td>$5000,00</td>
                     <td>$10.000,00</td>
-                    <td><figure><img src="bx-trash.svg" alt="icono de basura"></figure></td>
+                    <td><i class="fa-solid fa-trash-can"></i></td>
                 </tr>
             </tbody>
         </table>
+
     </main>
 
     <footer>
-        <div class="footer-inf">
-        <div>    
-        <h3 class="footer-contact"> <img src="../contacto/bxs-edit-location.svg" alt="icono de ubicacion"> Pavon 452, Bovril, Entre Ríos</h3>  
-        <h3 class="footer-contact"> <img src="../rrss/bxl-whatsapp.svg" alt="icono de whatsapp"> + 54 342 5148926</h3>
-        </div>
-        <nav>
-            <ul class="footer-redirigir">
+        <nav class="foot-nav">
+            <ul>
                 <li> <a href="../contacto/contacto.html">CONTACTO</a> </li>
                 <li> <a href="../ayuda/ayuda.html">AYUDA</a> </li>
             </ul>
-            <ul class="footer-rrss">
-                <li>
-                    <a href="https://www.facebook.com/chippra" target="_blank"><img src="../rrss/bxl-facebook-square.svg" alt="icono de facebook"></a> 
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/chippra" target="_blank"><img src="../rrss/bxl-instagram-alt.svg" alt="icono de instagram"></a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com/chippra" target="_blank"><img src="../rrss/bxl-twitter.svg" alt="icono de twitter"></a>
-                </li>
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=05493425148926" target="_blank"><img src="../rrss/bxl-whatsapp.svg" alt="icono de whatsapp"></a>
-                </li>
-            </ul> 
         </nav>
-
-        <div>
-            <h4 class="derecho-autor">2022, chipprabypaula</h4>
+        
+        <ul class="foot-rrss">
+            <li>
+                <a href="https://www.facebook.com/chippra" target="_blank"><i class="fa-brands fa-facebook-square"></i></a> 
+            </li>
+            <li>
+                <a href="https://www.instagram.com/chippra" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+            </li>
+            <li>
+                    <a href="https://api.whatsapp.com/send?phone=05493425148926" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+        </ul>
+    
+        <div class="footer-derechos">
+            <h4>2022, chipprabypaula</h4>
         </div>
-        </div>        
+
     </footer>
+
+</body>

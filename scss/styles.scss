@@ -25,6 +25,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    & a{
+        text-decoration: none;
+    }
     h1{
         font-family: $font-h1;
         font-size: ($size-h1 /1.5);
@@ -44,6 +47,13 @@ nav{
             font-size: $size-font-nav;
             color: $color-font-nav;
             transition: 2s;
+            &:hover{
+                background-color: $color-hover-nav;
+                font-weight: bolder;
+                transform: scale(1.05);
+                animation: $animate-hoover;
+                animation-duration: $animate-duration-hoover;
+            }
             a{
                 @extend %a-nav;
             }        
@@ -163,4 +173,70 @@ footer{
             }
         }
     }
+}
+
+/* Estilos main ayuda */
+
+#main-ayuda{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sec-como.comprar"
+                         "sec-envios";
+    grid-row-gap: 1rem;
+    justify-items: center;
+    .sec-como-comprar{
+        margin-top: 1rem;
+        @include sizes (90%, 50%);
+        & h2{
+            padding-left: 2rem;
+            font-family: $font-contact;
+            font-size: 3rem;
+            background-color: #B6F5C0;
+        }
+        & p{
+            padding: 2rem;
+            font-weight: bolder;
+            background-image: url(../ayuda/comocomprar.jpg);
+            background-size: 100% 100%;
+            opacity: 0.9;
+        }
+    }
+    .sec-envios{
+        @include sizes (90%, 50%);
+        margin-bottom: 1rem;
+        & p{
+            text-align: right;
+            font-weight: bolder;
+            padding: 2rem;
+            background-image: url(../ayuda/envios.jpg);
+            background-size: 100% 100%;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        & h2{
+            padding: 2rem;
+            text-align: right;
+            background-color: #F5B6B6;
+            font-family: $font-contact;
+            font-size: 3rem;
+        }        
+    }
+}
+
+/* Estilos main Productos*/
+
+#container-fluid{
+    .row{
+        padding: 1rem;
+    }
+}
+    
+
+/* Estilos del main html carrito*/
+
+#main-carrito{
+    font-family: $font-contact;
+    font-weight: 1000;
+    text-align: center;
+    border-collapse: collapse;
 }

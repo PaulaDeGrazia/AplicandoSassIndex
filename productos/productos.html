@@ -7,17 +7,20 @@
     <meta name="description" content="productos que ofrecemos en chipra, podés encontrar buzos frizados, cardigans, shorts, jeans, tops, ropa de noche, ropa para el día, cualquier prenda que necesites la vas a encontrar en nuestra página">
     <meta name="keywords" content="ropa, femenina, indumentaria, buzos, shorts, bodys, tops, jean, pollera, gorros, anteojos">
 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!--LINK DE ANIMATE-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- LINK DE CSS-->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <!-- LINK GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@100;300&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Brawler&family=Darker+Grotesque:wght@300&family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
 
     <!--LINK ICONOS-->
     <script src="https://kit.fontawesome.com/d6aeacbcd9.js" crossorigin="anonymous"></script>
@@ -29,81 +32,95 @@
 <body>
 
     <header>
-        <h1>CHIPPRA</h1>
+        <a href="../index.html"> <h1>CHIPPRA</h1></a>
     </header>
         <nav>
             <ul>
                 <li>PRODUCTOS</li>
                 <li> <a href="../contacto/contacto.html">CONTACTO</a> </li>
                 <li> <a href="../ayuda/ayuda.html">AYUDA</a> </li>
-                <li>
-                    <i class="fa-solid fa-cart-shopping"></i>     
-                </li>
+                <li> <a href="../carrito/carrito.html"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
             </ul>
         </nav>
 
-    <main>
-        <div>
-        
-            <ul class="contenedor">
+    <main id="container-fluid">
 
-                <h2>Abrigos</h2>
-                <figure><img width="250" height="350" src="Abrigo.png" alt="mujer con campera blanca" title="Abrigo"></figure>
-                <h2>Accesorios</h2>
-                <figure><img width="250" height="350" src="Accesorios.png" alt="tres anteojos" title="Accesorios"></figure>
-                <h2>Blazers</h2>
-                <figure><img width="250" height="350" src="Blazers.png" alt="Blazer naranja" title="Blazers"></figure>
-                <h2>Body</h2>
-                <figure><img width="250" height="350" src="Body.png" alt="mujer con un body negro" title="Body"></figure>
-                <h2>Pantalones</h2>
-                <figure><img width="250" height="350" src="pantalones.png" alt="mujer de pantalon negro y buzo blanco" title="Pantalones"></figure></li>
-                <h2>Poleras</h2>
-                <figure><img width="250" height="350" src="poleras.png" alt="polera amarilla" title="Poleras"></figure>
-                <h2>Polleras</h2>
-                <figure><img width="250" height="350" src="polleras.png" alt="pollera negra" title="Polleras"></figure>
-                <h2>Remerones</h2>
-                <figure><img width="250" height="350" src="remeron.png" alt="mujer con remera larga posando" title="Remones"></figure>
-                <h2>Shorts</h2>
-                <figure><img width="250" height="350" src="shorts.png" alt="short de jean" title="Shorts"></figure>
-                <h2>Tops</h2>
-                <figure><img width="250" height="350" src="tops.png" alt="top violeta" title="Tops"></figure>
+        <div class="row">
+            <div class="card col-6 text-center">
+                <img src="Abrigo.png" class="card-img-top" alt="chica con abrigo blanco">
+                <div class="card-body">
+                    <h5 class="card-title">Abrigos</h5>
+                </div>
+            </div>
 
-            </ul>
-        
+            <div class="card col-6 text-center">
+                <img src="Accesorios.png" class="card-img-top" alt="tres anteojos de distintos colores">
+                <div class="card-body">
+                  <h5 class="card-title">Accesorios</h5>
+                </div>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="card col-6 text-center">
+                <img src="remeron.png" class="card-img-top" alt="chica posando con remeron">
+                <div class="card-body">
+                  <h5 class="card-title">Remerones</h5>
+                </div>
+            </div>
+            
+            <div class="card col-6 text-center">
+                <img src="shorts.png" class="card-img-top" alt="Short de jean">
+                <div class="card-body">
+                  <h5 class="card-title">Shorts</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card col-6 text-center">
+                <img src="Body.png" class="card-img-top" alt="Short de jean">
+                <div class="card-body">
+                  <h5 class="card-title">Bodys</h5>
+                </div>
+            </div>
+
+            <div class="card col-6 text-center">
+                <img src="polleras.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Polleras</h5>
+            </div>
+        </div>
+
     </main>
 
     <footer>
-
-        <h3 class="footer-contact"> <img src="../contacto/bxs-edit-location.svg" alt="ícono de ubicación"> Pavon 452, Bovril, Entre Ríos</h3>
-        <h3 class="footer-contact"> <img src="../rrss/bxl-whatsapp.svg" alt="ícono de whatsapp"> + 54 342 5148926</h3>
-
-        <nav>
-            <ul class="footer-redirigir">
+        <nav class="foot-nav">
+            <ul>
                 <li> <a href="../contacto/contacto.html">CONTACTO</a> </li>
                 <li> <a href="../ayuda/ayuda.html">AYUDA</a> </li>
             </ul>
-            <ul class="footer-rrss">
-                <li>
-                    <a href="https://www.facebook.com/chippra" target="_blank"><img src="../rrss/bxl-facebook-square.svg" alt="icono de facebook"></a> 
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/chippra" target="_blank"><img src="../rrss/bxl-instagram-alt.svg" alt="icono de instagram"></a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com/chippra" target="_blank"><img src="../rrss/bxl-twitter.svg" alt="icono de twitter"></a>
-                </li>
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=05493425148926" target="_blank"><img src="../rrss/bxl-whatsapp.svg" alt="icono de whatsapp"></a>
-                </li>
-            </ul>
         </nav>
         
-        <div>
-            <h4>2022, chipprabypaula</h4>
-        </div>
-        
-    </footer>
+        <ul class="foot-rrss">
+            <li>
+                <a href="https://www.facebook.com/chippra" target="_blank"><i class="fa-brands fa-facebook-square"></i></a> 
+            </li>
+            <li>
+                <a href="https://www.instagram.com/chippra" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+            </li>
+            <li>
+                    <a href="https://api.whatsapp.com/send?phone=05493425148926" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+        </ul>
     
+    <div class="footer-derechos">
+        <h4>2022, chipprabypaula</h4>
+    </div>
+
+</footer>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
